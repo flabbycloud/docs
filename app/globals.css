@@ -160,8 +160,8 @@ kbd {
 .changelog { margin-bottom: 23px; }
 .nav-group { margin-bottom: 22px; }
 .nav-group h3 { margin: 0 0 5px 11px; font-size: 14px; font-weight: 400; }
-.nav-group a:hover { color: var(--text); background: var(--surface-soft); }
-.nav-group a.active { background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+.changelog:hover, .nav-group a:hover { color: var(--text); background: var(--surface-soft); }
+.changelog.active, .nav-group a.active { background: var(--accent-soft); color: var(--accent); font-weight: 500; }
 .nav-group svg { flex: 0 0 auto; }
 .nav-group .chevron { margin-left: auto; color: var(--faint); }
 

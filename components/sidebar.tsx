@@ -31,10 +31,11 @@ const groups = [
 export function Sidebar({ docs, open, close }: { docs: DocMeta[]; open: boolean; close: () => void }) {
   const pathname = usePathname();
   const bySlug = Object.fromEntries(docs.map((doc) => [doc.slug, doc]));
+  const changelogActive = pathname === "/docs/changelog";
 
   return (
     <aside className={`sidebar ${open ? "sidebar-open" : ""}`}>
-      <Link className="changelog" href="/docs/changelog" onClick={close}>
+      <Link className={`changelog ${changelogActive ? "active" : ""}`} href="/docs/changelog" onClick={close}>
         <FileClock size={17} /> <span>Changelog</span>
       </Link>
       {groups.map((group) => (
