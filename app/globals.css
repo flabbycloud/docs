@@ -161,9 +161,10 @@ kbd {
 .nav-group { margin-bottom: 22px; }
 .nav-group h3 { margin: 0 0 5px 11px; font-size: 14px; font-weight: 400; }
 .changelog:hover, .nav-group a:hover { color: var(--text); background: var(--surface-soft); }
-.changelog.active, .nav-group a.active { background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+.changelog.active, .nav-group a.active { background: var(--accent-soft); color: var(--accent); }
 .nav-group svg { flex: 0 0 auto; }
 .nav-group .chevron { margin-left: auto; color: var(--faint); }
+.nav-group .chevron-hidden { opacity: 0; }
 
 .doc-main { min-width: 0; padding: 40px 0 100px; }
 .breadcrumb { color: var(--accent); font-size: 14px; font-weight: 400; margin-bottom: 6px; }

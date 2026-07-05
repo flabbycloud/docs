@@ -28,6 +28,8 @@ const groups = [
   { title: "Manage", slugs: ["teams"] },
 ];
 
+const plainLinks = new Set(["products", "why-flabbycloud", "ai-tools", "teams"]);
+
 export function Sidebar({ docs, open, close }: { docs: DocMeta[]; open: boolean; close: () => void }) {
   const pathname = usePathname();
   const bySlug = Object.fromEntries(docs.map((doc) => [doc.slug, doc]));
@@ -50,7 +52,7 @@ export function Sidebar({ docs, open, close }: { docs: DocMeta[]; open: boolean;
               <Link className={active ? "active" : ""} href={`/docs/${slug}`} key={slug} onClick={close}>
                 <Icon size={17} />
                 <span>{doc.title}</span>
-                {!["products", "why-flabbycloud", "ai-tools", "teams"].includes(slug) && <ChevronRight className="chevron" size={14} />}
+                <ChevronRight className={`chevron ${plainLinks.has(slug) ? "chevron-hidden" : ""}`} size={14} />
               </Link>
             );
           })}
